@@ -18,4 +18,18 @@ public class Car {
         System.out.println("Model: " + model);
         System.out.println("Year: " + year);
     }
+    public void accelerate() {
+        System.out.println("The " + make + " " + model + " is accelerating");
+    }
+    public void brake() {
+        System.out.println("The " + make + " " + model + " is braking");
+    }
+    public String getMakeAndModel() {
+        return make + " " + model;
+    }
+
+    public boolean isAntique() {
+        int currentYear = java.time.Year.now().getValue();
+        return (currentYear - year) > 25;
+    }
 }
